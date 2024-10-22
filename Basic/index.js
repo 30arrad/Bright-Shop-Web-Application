@@ -3,7 +3,8 @@ const body = document.querySelector("body"),
   toggle = body.querySelector(".toggle"),
   searchBtn = body.querySelector(".search-box"),
   modeSwitch = body.querySelector(".toggle-switch"),
-  modeText = body.querySelector(".mode-text");
+  modeText = body.querySelector(".mode-text"),
+  main = body.querySelector("main");
 
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");

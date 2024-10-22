@@ -13,6 +13,9 @@
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
     --text-color: #707070;
+
+    --maindiv-color: #707070;
+    
   
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -39,6 +42,8 @@
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+
+    --maindiv-color: #ccc;
   }
   
   /* ===== Sidebar ===== */
@@ -305,23 +310,23 @@
   body.dark .home .text {
     color: var(--text-color);
   }
-
+/* ----------------------------------------------------------------------  */
   .mainpage {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 87%;
     padding: 20px;
-    background-color: #dc143c;
+    background-color: whitesmoke (--maindiv-color);
   }
   .maindiv {
     display: flex;
     justify-content: space-between;
     width: 100px;
     height: 50px;
-    border: 2px solid red;
-    background-color: #707070;
+    border: 2px solid var(--text-color);
+    background-color: wheat (--maindiv-color); 
     text-align: center;
     font-size: medium;
-
+    color: var(--text-color);
   }
