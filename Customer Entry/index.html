@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Entry</title>
+    <link rel="stylesheet" href="../Product Entry/index.css">
+    <link rel="stylesheet" href="../Basic/index.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="../Basic/arrad.png" alt="image">
+          </span>
+    
+          <div class="text logo-text">
+            <span class="name">Arrad Ahmed </span>
+            <span class="profession">Web Developer</span>
+          </div>
+        </div>
+    
+        <i class='bx bx-chevron-right toggle'></i>
+      </header>
+    
+      <div class="menu-bar">
+        <div class="menu">
+    
+          <li class="search-box">
+            <i class='bx bx-search icon'></i>
+            <input type="text" placeholder="Search...">
+          </li>
+    
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="../Dashboard/index.html">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+    
+            <li class="nav-link">
+              <a href="#">
+                <i class='bx bx-bar-chart-alt-2 icon'></i>
+                <span class="text nav-text">Revenue</span>
+              </a>
+            </li>
+    
+            <li class="nav-link">
+              <a href="#">
+                <i class='bx bx-bell icon'></i>
+                <span class="text nav-text">Notifications</span>
+              </a>
+            </li>
+    
+            <li class="nav-link">
+              <a href="#">
+                <i class='bx bx-pie-chart-alt icon'></i>
+                <span class="text nav-text">Analytics</span>
+              </a>
+            </li>
+    
+            <li class="nav-link">
+              <a href="#">
+                <i class='bx bx-heart icon'></i>
+                <span class="text nav-text">Likes</span>
+              </a>
+            </li>
+    
+            <li class="nav-link">
+              <a href="#">
+                <i class='bx bx-wallet icon'></i>
+                <span class="text nav-text">Wallets</span>
+              </a>
+            </li>
+    
+          </ul>
+        </div>
+    
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class='bx bx-log-out icon'></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+    
+          <li class="mode">
+            <div class="sun-moon">
+              <i class='bx bx-moon icon moon'></i>
+              <i class='bx bx-sun icon sun'></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+    
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+    
+        </div>
+      </div>
+    
+    </nav>
+    
+    <section class="home">
+      <header>
+        <div id="hr" class="text">Customer Entry Form</div>
+      </header>
+
+      <main>
+        <div class="form-container">
+            <form id="productForm">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="name">Customer Name:</label>
+                <input type="texts" id="name" name="name" required>
+
+                <label for="quantity">Total Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="cost">Total Cost:</label>
+                <input type="number" id="cost" name="cost" step="0.01" required>
+
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+      </main>
+
+    </section>
+    
+    
+    <!-- partial -->
+      <script  src="../Product Entry/index.js"></script>
+      <script src="../Basic/index.js"></script>
+    
+    </body>
+</html>
