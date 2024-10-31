@@ -1,0 +1,63 @@
+/* Main Content styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    font-size: 23px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+    height: 50%;
+}
+/* Header section styling */
+.header {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.input-group input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 17px;
+}
+/* Table styling */
+table {
+    margin: 2px;
+    width: 95%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--sidebar-color);
+    font-weight: bold;
+}
