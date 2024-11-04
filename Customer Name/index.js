@@ -1,3 +1,5 @@
+addCustomerSell();
+
 function addCustomerSell() {
 
   document.getElementById('customerForm').addEventListener('submit', function(e) {
