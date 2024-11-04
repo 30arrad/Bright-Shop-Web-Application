@@ -1,64 +1,46 @@
-let SellList = [
-    {
-      Date: '4/10/2024',
-      TotalBuy: '500',
-      CashTK:'400',
-      CollectionTk:'0',
-      DueTk:'100',
-      Balance:'-100',
-    },
-  ];
+function addCustomerSell() {
+
+  document.getElementById('customerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
   
-  CustomerSell();
+    // Get input values
+    const customerName = document.getElementById('customerName').value;
+    const date = document.getElementById('date').value;
+    const totalBuy = parseFloat(document.getElementById('totalBuy').value);
+    const cashTk = parseFloat(document.getElementById('cashTk').value);
+    const collectionTk = parseFloat(document.getElementById('collectionTk').value);
+    const dueTk = parseFloat(document.getElementById('dueTk').value);
   
-  function addCustomerSell() {
-    let date = document.querySelector('#date');
-    let TotalBuy = document.querySelector('#total-buy');
-    let cash = document.querySelector('#cash');
-    let collection = document.querySelector('#collection');
-    let due = document.querySelector('#due');
-    // let name = document.querySelector('#name');
-
-    let Cname = name.value;
-    let Cdate = date.value;
-    let CTotalBuy = TotalBuy.value;
-    let Ccash = cash.value;
-    let Ccollection = collection.value;
-    let Cdue = due.value;
-
-
-    SellList.push({ Date: Cname,
-        TotalBuy: Cdate,
-        CashTK:CTotalBuy,
-        CollectionTk:Ccash,
-        DueTk:Ccollection,
-        Balance:Cdue,
-    });
-
-    // name.value = '';
-    date.value = '';
-    TotalBuy.value = '';
-    cash.value = '';
-    collection.value = '';
-    due.value = '';
-    CustomerSell();
+    // Calculate balance
+    const balance = totalBuy - (cashTk + collectionTk);
+  
+    // Add data to the table
+    const tableBody = document.getElementById('customerTable').querySelector('tbody');
+    const row = document.createElement('tr');
+  
+    row.innerHTML = `
+      <td>${date}</td>
+      <td>${totalBuy}</td>
+      <td>${cashTk}</td>
+      <td>${collectionTk}</td>
+      <td>${dueTk}</td>
+      <td>${balance}</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    `;
+  
+    tableBody.appendChild(row);
+  
+    // Clear the form
+    document.getElementById('customerForm').reset();
+  });
+  
+  function deleteRow(button) {
+    const row = button.closest('tr');
+    row.remove();
   }
   
-  function CustomerSell() {
-    let containerElement = document.querySelector('.customername');
-    let newHtml = '';
-    for (let i = 0; i < SellList.length; i++) {
-      let {Date, TotalBuy, CashTK, CollectionTk, DueTk} = SellList[i];
-      newHtml += `
-            <td>${Date}<td>
-            <td>${TotalBuy}</td>
-            <td>${CashTK}<td>
-            <td>${CollectionTk}</td>
-            <td>${DueTk}</td>
+}
 
-        <button class='btn-delete' onclick="SellList.splice(${i}, 1);
-        displayItems();">Delete</button>
-      `;
-    }
-    containerElement.innerHTML = newHtml;
-  }
+
+
+
