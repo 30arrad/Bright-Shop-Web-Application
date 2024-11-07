@@ -20,7 +20,7 @@ row.innerHTML = `
     <td>${collectionTk}</td>
     <td>${dueTk}</td>
     <td>${balance}</td>
-    <td><button onclick="deleteRow(this)">Delete</button></td>
+    <td ><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
 `;
 
 tableBody.appendChild(row);

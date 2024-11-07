@@ -1,6 +1,6 @@
 .dashboarddiv {
-    height: 100px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     background-color: var(--sidebar-color);
     border: 2px solid red;
     text-align: center;

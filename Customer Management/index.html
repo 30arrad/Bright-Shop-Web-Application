@@ -5,8 +5,9 @@
   <title>Sidebar Menu</title>
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
-<link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="../Basic/index.css">
+<link rel="stylesheet" href="../Customer Name/index.css">
+<link rel="stylesheet" href="index.css">
 
 </head>
 <body>
@@ -37,7 +38,7 @@
 
       <ul class="menu-links">
         <li class="nav-link">
-          <a href="#">
+          <a href="../Dashboard/index.html">
             <i class='bx bx-home-alt icon'></i>
             <span class="text nav-text">Dashboard</span>
           </a>
@@ -108,24 +109,49 @@
 
 <section class="home">
   <header>
-    <div id="hr" class="text">Dashboard</div>
+    <div id="hr" class="text">Customer Management System</div>
   </header>
-  <main>
-<div class="dashboardmaindiv">
-    <a href="../Product Entry/index.html"><div class="dashboarddiv">Product Entry Form</div></a>
-    <a href="../Customer Entry/index.html"><div class="dashboarddiv">Customer Entry Form</div></a>
-    <a href="../Customer Name/index.html"><div class="dashboarddiv">Customer Name</div></a>
-    <a href="../Customer Management/index.html"><div class="dashboarddiv">Customer Management System</div></a>
-    <a href=""><div class="dashboarddiv">5</div></a>
-    <a href=""><div class="dashboarddiv">6</div></a>
+  <div class="container">
+    <div class="form-container">
+        <form id="customerForm">
+            <input type="hidden" id="customerId">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" required>
+
+            <button type="submit" class="submit-btn">Add Customer</button>
+        </form>
+    </div>
+    
+    <div class="list-container">
+        <h2 id="CustomerList">Customer List</h2>
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer rows will be populated here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
 </div>
-  </main>
+
 </section>
 
 
 <!-- partial -->
-  <script  src="index.js"></script>
-  <script src="../Basic/index.js"></script>
+  <script  src="../Basic/index.js"></script>
+  <script src="index.js"></script>
 
 </body>
 </html>
