@@ -1,20 +1,16 @@
-// document.getElementById('customerForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     const date = document.getElementById('date').value;
-//     const name = document.getElementById('name').value;
-//     const totalBuy = document.getElementById('total-buy').value;
-//     const cash = document.getElementById('cash').value;
-    
-//     const collection = document.getElementById('collection').value;
-    
-//     const due = document.getElementById('due').value;
-    
-//     // Placeholder for form handling logic
-//     alert(`Form submitted!\nDate: ${date}\nName: ${name}\nTotal Buy: ${totalBuy}\nCash: ${cash}\ncollection:${collection}\nTotal Due: ${due}`);
-//     addCustomerSell();
-// });
 
 
-addCustomerSell();
+function saveData(event) {
+    event.preventDefault();
 
-console.log(addCustomerSell());
+    // Store form data in sessionStorage
+    sessionStorage.setItem('customerName', document.getElementById('customerName').value);
+    sessionStorage.setItem('date', document.getElementById('date').value);
+    sessionStorage.setItem('totalBuy', document.getElementById('totalBuy').value);
+    sessionStorage.setItem('cashTk', document.getElementById('cashTk').value);
+    sessionStorage.setItem('collectionTk', document.getElementById('collectionTk').value);
+    sessionStorage.setItem('dueTk', document.getElementById('dueTk').value);
+
+    // Redirect to the second page
+    window.location.href = "../Customer Name/index.html"; // Replace with the actual path to the second page
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Entry</title>
+    <link rel="stylesheet" href="../Product Entry/index.css">
+    <link rel="stylesheet" href="../Basic/index.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+</head>
+<body>
+
+<!-- Sidebar and other elements omitted for brevity -->
+
+<section class="home">
+    <header>
+        <div id="hr" class="text">Customer Entry Form</div>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="customerForm" onsubmit="saveData(event)">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="totalBuy">Total Buy:</label>
+                <input type="number" id="totalBuy" required>
+
+                <label for="cashTk">Cash Tk:</label>
+                <input type="number" id="cashTk" required>
+
+                <label for="collectionTk">Collection Tk:</label>
+                <input type="number" id="collectionTk" required>
+
+                <label for="dueTk">Due Tk:</label>
+                <input type="number" id="dueTk" required>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+</section>
+
+<script>
+    function saveData(event) {
+        event.preventDefault();
+
+        // Store form data in sessionStorage
+        sessionStorage.setItem('customerName', document.getElementById('customerName').value);
+        sessionStorage.setItem('date', document.getElementById('date').value);
+        sessionStorage.setItem('totalBuy', document.getElementById('totalBuy').value);
+        sessionStorage.setItem('cashTk', document.getElementById('cashTk').value);
+        sessionStorage.setItem('collectionTk', document.getElementById('collectionTk').value);
+        sessionStorage.setItem('dueTk', document.getElementById('dueTk').value);
+
+        // Redirect to the second page
+        window.location.href = "indextwo.html"; // Replace with the actual path to the second page
+    }
+</script>
+
+</body>
+</html>

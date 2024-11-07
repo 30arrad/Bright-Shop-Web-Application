@@ -107,37 +107,35 @@
     
     <section class="home">
       <header>
-        <div id="hr" class="text">Customer Entry Form</div>
+          <div id="hr" class="text">Customer Entry Form</div>
       </header>
-
       <main>
-        <div class="form-container">
-          <form id="customerForm">
-            <label for="customerName">Customer Name:</label>
-            <input type="text" id="customerName" required>
-    
-            <label for="date">Date:</label>
-            <input type="date" id="date" required>
-    
-            <label for="totalBuy">Total Buy:</label>
-            <input type="number" id="totalBuy" required>
-    
-            <label for="cashTk">Cash Tk:</label>
-            <input type="number" id="cashTk" required>
-    
-            <label for="collectionTk">Collection Tk:</label>
-            <input type="number" id="collectionTk" required>
-    
-            <label for="dueTk">Due Tk:</label>
-            <input type="number" id="dueTk" required>
-    
-            <button type="submit" class="submit-btn" onclick="addCustomerSell()">Submit</button>
-          </form>
-  </form>
-        </div>
+          <div class="form-container">
+              <form id="customerForm" onsubmit="saveData(event)">
+                  <label for="customerName">Customer Name:</label>
+                  <input type="text" id="customerName" required>
+  
+                  <label for="date">Date:</label>
+                  <input type="date" id="date" required>
+  
+                  <label for="totalBuy">Total Buy:</label>
+                  <input type="number" id="totalBuy" required>
+  
+                  <label for="cashTk">Cash Tk:</label>
+                  <input type="number" id="cashTk" required>
+  
+                  <label for="collectionTk">Collection Tk:</label>
+                  <input type="number" id="collectionTk" required>
+  
+                  <label for="dueTk">Due Tk:</label>
+                  <input type="number" id="dueTk" required>
+  
+                  <button type="submit" class="submit-btn">Submit</button>
+              </form>
+          </div>
       </main>
+  </section>
 
-    </section>
     
     
     <!-- partial -->
